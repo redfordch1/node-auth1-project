@@ -8,12 +8,12 @@ module.exports = {
 };
 
 function find() {
-  return db("users").select("id", "username");
+  return db("users").select("id", "username", "department");
 }
 
 function findBy(filter) {
   return db("users")
-    .select("id", "username", "password")
+    .select("id", "username", "password", "department")
     .where(filter);
 }
 
